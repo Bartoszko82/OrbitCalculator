@@ -1,14 +1,14 @@
-package com.bartoszko.App;
+package com.bartoszko.app;
 
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import model.CelestialBody;
-import model.Kerbin;
-import util.Orbit;
-import util.VisViva;
-import util.VisVivaImpl;
+import com.bartoszko.model.CelestialBody;
+import com.bartoszko.model.Kerbin;
+import com.bartoszko.model.Orbit;
+import com.bartoszko.util.VisViva;
+import com.bartoszko.util.VisVivaImpl;
 
 /**
  * Hello world!
@@ -23,19 +23,18 @@ public class App
         //TODO
 //        - rethink/unify variable types
 //        - ChosenBodyParams > singelton
-//        - Orbit builder
-//        - handling with missing orbital data
-//        - wrap my head around log
+//        - handling with missing orbital data - partly done, rethink
 //        - ChosenBodyParams - loading default field values if not given new
         
         Logger logger = LogManager.getLogger();
         
-        logger.trace("trace");
-        logger.debug("debug");
-        logger.info("info");
-        logger.warn("warn");;
-        logger.error("error");
-        logger.fatal("fatal");
+//        logger.trace("trace");
+//        logger.debug("debug");
+//        logger.info("info");
+//        logger.warn("warn");;
+//        logger.error("error");
+//        logger.fatal("fatal");
+        
         
         
     }

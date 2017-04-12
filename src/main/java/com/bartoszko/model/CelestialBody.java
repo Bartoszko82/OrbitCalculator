@@ -1,4 +1,4 @@
-package model;
+package com.bartoszko.model;
 
 public class CelestialBody {
 	

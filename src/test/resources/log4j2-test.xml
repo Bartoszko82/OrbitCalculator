@@ -6,10 +6,10 @@
     </Console>
   </Appenders>
   <Loggers>
-    <Logger name="com.bartoszko.App" level="trace">
+    <Logger name="com.bartoszko.AppTest" level="trace">
       <AppenderRef ref="Console"/>
     </Logger>
-     <Logger name="com.bartoszko" level="trace">
+     <Logger name="com.bartoszko.OrbitTest" level="debug">
       <AppenderRef ref="Console"/>
     </Logger>
     <Root level="trace">

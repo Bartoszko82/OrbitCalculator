@@ -1,4 +1,4 @@
-package com.bartoszko.OrbitCalculator;
+package com.bartoszko.test;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

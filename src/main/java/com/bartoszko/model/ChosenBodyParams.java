@@ -1,6 +1,4 @@
-package util;
-
-import model.CelestialBody;
+package com.bartoszko.model;
 
 public class ChosenBodyParams {
 	

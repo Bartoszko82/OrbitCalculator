@@ -1,4 +1,4 @@
-package util;
+package com.bartoszko.util;
 
 public class LoadBody {
 

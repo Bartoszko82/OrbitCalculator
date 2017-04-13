@@ -6,8 +6,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class Orbit {
-	
-	
 	private final int apoapsisInMetres;
 	private final int periapsisInMetres;
 	private final double eccentricity;

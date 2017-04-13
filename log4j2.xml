@@ -9,7 +9,7 @@
     <Logger name="com.bartoszko.App" level="TRACE">
       <AppenderRef ref="Console"/>
     </Logger>
-    <Logger name="com.bartoszko.Orbit" level="DEBUG">
+    <Logger name="com.bartoszko.util.Orbit" level="DEBUG">
       <AppenderRef ref="Console"/>
     </Logger>
     <Root level="error">

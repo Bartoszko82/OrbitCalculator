@@ -21,13 +21,12 @@ public class App
         System.out.println( "Orbit Calculator for Kerbal Space Program" );
         
         //TODO
-//        - rethink/unify variable types
-//        - ChosenBodyParams > singelton
+//        - ChosenBody/CelestialBody/Bodies - add field name, unify variable types, add missing setters and final fields where applicable 
 //        - handling with missing orbital data - partly done, rethink
 //        - ChosenBodyParams - loading default field values if not given new
         
-        Logger logger = LogManager.getLogger();
         
+//        Logger logger = LogManager.getLogger();
 //        logger.trace("trace");
 //        logger.debug("debug");
 //        logger.info("info");

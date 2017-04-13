@@ -1,5 +1,7 @@
 package com.bartoszko.test;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -9,7 +11,6 @@ public class OrbitTest {
 	
 	@Test
 	public void shouldBuildOrbitWithApoapsisIneMetres() {
-		
 //		given
 		int testValue = 70000;
 		Orbit orbit = new Orbit.Builder().apoapsisInMetres(testValue).build();

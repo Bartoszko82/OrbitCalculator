@@ -1,6 +1,7 @@
 package com.bartoszko.model;
 
-public class CelestialBody {
+public class ChosenBody extends CelestialBody {
+	public static final ChosenBody INSTANCE = new ChosenBody();
 	private String name;
 	
 	//Orbit
@@ -24,7 +25,7 @@ public class CelestialBody {
 	private double densityInKgPerCubeMeter;
 	private double surfaceGravity;
 	
-	public CelestialBody(){};
+	private ChosenBody(){};
 	
 	public long getSemiMajorAxisInMetres() {
 		return semiMajorAxisInMetres;
@@ -33,6 +34,7 @@ public class CelestialBody {
 	public void setApoapsisInMetres(long apoapsis) {
 		this.apoapsisIMetres = apoapsis;
 	}
+	
 	public long getApoapsisInInMetres() {
 		return apoapsisIMetres;
 	}
@@ -83,4 +85,5 @@ public class CelestialBody {
 	public double getSurfaceGravity() {
 		return surfaceGravity;
 	}
+
 }

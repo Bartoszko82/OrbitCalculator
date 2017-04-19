@@ -33,10 +33,10 @@ public class CelestialBody {
 	public void setApoapsisInMetres(long apoapsis) {
 		this.apoapsisIMetres = apoapsis;
 	}
-	public long getApoapsisInInMetres() {
+	public long getApoapsisInMetres() {
 		return apoapsisIMetres;
 	}
-	public long getPeriapsisInInMetres() {
+	public long getPeriapsisInMetres() {
 		return periapsisInMetres;
 	}
 	public long getEccentricity() {
@@ -65,6 +65,10 @@ public class CelestialBody {
 		return radiusInMetres;
 	}
 	
+	public void setRadiusInMetres(long radius) {
+		this.radiusInMetres = radius;
+	}
+	
 	public long getEquatorialCircumferenceInMetres() {
 		return equatorialCircumferenceInMetres;
 	}
@@ -73,6 +77,9 @@ public class CelestialBody {
 	}
 	public double getMassInKg() {
 		return massInKg;
+	}
+	public void setGravitationalParameter(double parameter) {
+		this.gravitationalParameter = parameter;
 	}
 	public double getGravitationalParameter() {
 		return gravitationalParameter;

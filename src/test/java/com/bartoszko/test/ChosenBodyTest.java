@@ -1,5 +1,7 @@
 package com.bartoszko.test;
 
+import static org.mockito.Mockito.when;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -32,14 +34,15 @@ public class ChosenBodyTest {
 
 //		when
 		body1.setApoapsisInMetres(70000);
-		long body1apoapsis = body1.getApoapsisInInMetres();
-		long body2apoapsis = body2.getApoapsisInInMetres();
+		long body1apoapsis = body1.getApoapsisInMetres();
+		long body2apoapsis = body2.getApoapsisInMetres();
 		
 		
 //		then
 		Assert.assertTrue(body1apoapsis == body2apoapsis);
 		
 	}
+
 
 	
 	

@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.bartoszko.model.CelestialBody;
+import com.bartoszko.model.ChosenBody;
 import com.bartoszko.model.Orbit;
 import com.bartoszko.model.OrbitingBody;
 
@@ -15,9 +16,10 @@ public class VisVivaImpl implements VisViva {
 	
 	Logger log = LogManager.getLogger();
 	
-	public VisVivaImpl (Orbit orbit, CelestialBody celestialBody, OrbitingBody orbitingBody) {
+	public VisVivaImpl (Orbit orbit, /*CelestialBody celestialBody, */OrbitingBody orbitingBody) {
 		this.orbit = orbit;
-		this.celestialBody = celestialBody;
+		this.celestialBody = ChosenBody.INSTANCE;
+//		this.celestialBody = celestialBody;
 		this.orbitingBody = orbitingBody;
 	}
 	
@@ -35,7 +37,9 @@ public class VisVivaImpl implements VisViva {
 	public double resolveForSpeed () {
 		double apoapsis = orbit.getApoapsisInMetres();
 		double periapsis = orbit.getPeriapsisInMetres();
-		double distance = orbitingBody.getHeightInMetres() + celestialBody.getRadiusInMetres(); 
+		log.debug(periapsis);
+		double distance = orbitingBody.getHeightInMetres() + celestialBody.getRadiusInMetres();
+		log.debug(celestialBody.getRadiusInMetres());
 		double SemiMajorAxis = (apoapsis + periapsis)/2 + celestialBody.getRadiusInMetres(); 
 		
 		double speedSquared = celestialBody.getGravitationalParameter()*(2/distance - 1 / SemiMajorAxis);

@@ -35,10 +35,10 @@ public class ChosenBody extends CelestialBody {
 		this.apoapsisIMetres = apoapsis;
 	}
 	
-	public long getApoapsisInInMetres() {
+	public long getApoapsisInMetres() {
 		return apoapsisIMetres;
 	}
-	public long getPeriapsisInInMetres() {
+	public long getPeriapsisInMetres() {
 		return periapsisInMetres;
 	}
 	public long getEccentricity() {
@@ -63,6 +63,9 @@ public class ChosenBody extends CelestialBody {
 		return orbitalSpeedInMetersPerSec;
 	}
 	
+	public void setRadiusInMetres(long radius) {
+		this.radiusInMetres = radius;
+	}
 	public long getRadiusInMetres() {
 		return radiusInMetres;
 	}
@@ -75,6 +78,10 @@ public class ChosenBody extends CelestialBody {
 	}
 	public double getMassInKg() {
 		return massInKg;
+	}
+	
+	public void setGravitationalParameter(double parameter) {
+		this.gravitationalParameter = parameter;
 	}
 	public double getGravitationalParameter() {
 		return gravitationalParameter;

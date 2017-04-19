@@ -2,13 +2,13 @@ package com.bartoszko.model;
 
 public class Kerbin extends CelestialBody {
 
-	private long radiusInMetres = 600000;
-	private long equatorialCircumferenceInMetres;
-	private double areaInSquareMetres;
-	private double massInKg;
-	private double gravitationalParameter = 3.5316000e12;
-	private double densityInKgPerCubeMeter;
-	private double surfaceGravity;
+	private final long radiusInMetres = 600000;
+	private final long equatorialCircumferenceInMetres = 10;
+	private final double areaInSquareMetres = 10;
+	private final double massInKg = 10;
+	private final double gravitationalParameter = 3.5316000e12;
+	private final double densityInKgPerCubeMeter = 10;
+	private final double surfaceGravity = 9.8;
 	
 	public Kerbin() {}
 

@@ -12,7 +12,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 
 import com.bartoszko.model.CelestialBody;
 import com.bartoszko.model.ChosenBody;
-import com.bartoszko.model.Kerbin;
+import com.bartoszko.model.KerbinTempForTest;
 import com.bartoszko.model.Orbit;
 import com.bartoszko.model.OrbitingBody;
 import com.bartoszko.util.VisVivaImpl;
@@ -21,7 +21,7 @@ import com.bartoszko.util.VisVivaImpl;
 public class VisVivaImplTest {
 
 	CelestialBody chosenBody = ChosenBody.INSTANCE;
-	CelestialBody kerbin = new Kerbin();
+	CelestialBody kerbin = new KerbinTempForTest();
 	
 	@InjectMocks
 	VisVivaImpl visViva;

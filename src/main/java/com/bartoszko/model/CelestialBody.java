@@ -1,28 +1,30 @@
 package com.bartoszko.model;
 
-public class CelestialBody {
+public abstract class CelestialBody {
 	private String name;
 	
-	//Orbit
+	//Orbit properties
 	private long semiMajorAxisInMetres; //unify field types with Orbit class
 	private long apoapsisIMetres;
 	private long periapsisInMetres;
 	private long eccentricity;
-	private long inclination;
+	private long inclinationInDegrees;
 	private long argumentOfPeriapsis;
 	private long argumentOfAscendingNode;
 	private long trueAnomaly;
 	private long orbitalPeriod;
 	private long orbitalSpeedInMetersPerSec;
 	
-	//Properties
+	//Physical properties
+	private double massInKg;
 	private long radiusInMetres;
 	private long equatorialCircumferenceInMetres;
 	private double areaInSquareMetres;
-	private double massInKg;
 	private double gravitationalParameter;
 	private double densityInKgPerCubeMeter;
 	private double surfaceGravity;
+	private boolean isAtmospherePresent;
+//	private double AtmosphereHeight; //check more atmo parameters
 	
 	public CelestialBody(){};
 	
@@ -43,7 +45,7 @@ public class CelestialBody {
 		return eccentricity;
 	}
 	public long getInclination() {
-		return inclination;
+		return inclinationInDegrees;
 	}
 	public long getArgumentOfPeriapsis() {
 		return argumentOfPeriapsis;

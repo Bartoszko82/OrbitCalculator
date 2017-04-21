@@ -1,6 +1,6 @@
 package com.bartoszko.model;
 
-public class Kerbin extends CelestialBody {
+public class KerbinTempForTest extends CelestialBody {
 
 	private final long radiusInMetres = 600000;
 	private final long equatorialCircumferenceInMetres = 10;
@@ -10,7 +10,7 @@ public class Kerbin extends CelestialBody {
 	private final double densityInKgPerCubeMeter = 10;
 	private final double surfaceGravity = 9.8;
 	
-	public Kerbin() {}
+	public KerbinTempForTest() {}
 
 	public long getRadiusInMetres() {
 		return radiusInMetres;

@@ -6,21 +6,18 @@ import org.apache.logging.log4j.Logger;
 import com.bartoszko.model.CelestialBody;
 import com.bartoszko.model.ChosenBody;
 import com.bartoszko.model.Orbit;
-import com.bartoszko.model.OrbitingBody;
 
 public class VisVivaImpl implements VisViva {
 
 	private Orbit orbit;
 	private CelestialBody celestialBody;
-	private OrbitingBody orbitingBody;
 	
 	Logger log = LogManager.getLogger();
 	
-	public VisVivaImpl (Orbit orbit, /*CelestialBody celestialBody, */OrbitingBody orbitingBody) {
+	public VisVivaImpl (Orbit orbit) {
 		this.orbit = orbit;
 		this.celestialBody = ChosenBody.INSTANCE;
 //		this.celestialBody = celestialBody;
-		this.orbitingBody = orbitingBody;
 	}
 	
 //	VisViva equation
@@ -38,7 +35,7 @@ public class VisVivaImpl implements VisViva {
 		double apoapsis = orbit.getApoapsisInMetres();
 		double periapsis = orbit.getPeriapsisInMetres();
 		log.debug(periapsis);
-		double distance = orbitingBody.getHeightInMetres() + celestialBody.getRadiusInMetres();
+		double distance = orbit.getHeightInMetres() + celestialBody.getRadiusInMetres();
 		log.debug(celestialBody.getRadiusInMetres());
 		double SemiMajorAxis = (apoapsis + periapsis)/2 + celestialBody.getRadiusInMetres(); 
 		

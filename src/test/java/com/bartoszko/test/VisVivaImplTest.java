@@ -14,7 +14,6 @@ import com.bartoszko.model.CelestialBody;
 import com.bartoszko.model.ChosenBody;
 import com.bartoszko.model.KerbinTempForTest;
 import com.bartoszko.model.Orbit;
-import com.bartoszko.model.OrbitingBody;
 import com.bartoszko.util.VisVivaImpl;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -29,9 +28,6 @@ public class VisVivaImplTest {
 	@Mock
 	Orbit orbit;
 	
-	@Mock
-	OrbitingBody orbitingBody;
-	
 	@Test
 	public void shouldGiveProperSpeedForKerbinLowOrbit() {
 //		given
@@ -40,7 +36,7 @@ public class VisVivaImplTest {
 		double distance = 70000;
 		when(orbit.getApoapsisInMetres()).thenReturn(apoapsis);
 		when(orbit.getPeriapsisInMetres()).thenReturn(periapsis);
-		when(orbitingBody.getHeightInMetres()).thenReturn(distance);
+		when(orbit.getHeightInMetres()).thenReturn(distance);
 		chosenBody.setRadiusInMetres(kerbin.getRadiusInMetres());
 		chosenBody.setGravitationalParameter(kerbin.getGravitationalParameter());
 		

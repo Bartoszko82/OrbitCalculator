@@ -6,6 +6,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class Orbit {
+	private static Logger log = LogManager.getLogger(Orbit.class.getName());
+	
 	private final int apoapsisInMetres;
 	private final int periapsisInMetres;
 	private final double eccentricity;
@@ -14,7 +16,8 @@ public class Orbit {
 	private final double longitudeOfAscendingNode;
 	private final double argumentOdPeriapsis;
 	private final double trueAnomaly;
-	private static Logger log = LogManager.getLogger(Orbit.class.getName());
+	private final double heightInMetres;
+	private final double speedInMetresPerSecond;
 	
 	public Orbit(Builder builder) {
 		apoapsisInMetres = builder.apoapsisInMetres;
@@ -25,6 +28,8 @@ public class Orbit {
 		longitudeOfAscendingNode = builder.longitudeOfAscendingNode;
 		argumentOdPeriapsis = builder.argumentOdPeriapsis;
 		trueAnomaly = builder.trueAnomaly;
+		heightInMetres = builder.heightInMetres;
+		speedInMetresPerSecond = builder.speedInMetresPerSecond;
 		
 		log.trace("new Instance of Orbit Created");
 	}
@@ -61,6 +66,14 @@ public class Orbit {
 		return trueAnomaly;
 	}
 	
+	public double getHeightInMetres() {
+		return heightInMetres;
+	}
+	
+	public double getSpeedInMetresPerSecond() {
+		return speedInMetresPerSecond;
+	}
+	
 	public static class Builder {
 		private int apoapsisInMetres;
 		private int periapsisInMetres;
@@ -70,6 +83,8 @@ public class Orbit {
 		private double longitudeOfAscendingNode;
 		private double argumentOdPeriapsis;
 		private double trueAnomaly;
+		private double heightInMetres;
+		private double speedInMetresPerSecond;
 	
 		public Builder(){
 			
@@ -107,6 +122,16 @@ public class Orbit {
 		
 		public Builder trueAnomaly(double val) {
 			trueAnomaly = val;
+			return this;
+		}
+		
+		public Builder heightInMetres(double val) {
+			heightInMetres = val;
+			return this;
+		}
+		
+		public Builder speedInMetresPerSecond(double val) {
+			speedInMetresPerSecond = val;
 			return this;
 		}
 	

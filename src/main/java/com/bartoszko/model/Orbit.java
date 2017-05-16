@@ -3,19 +3,21 @@ package com.bartoszko.model;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import lombok.Getter;
+
 public class Orbit {
 	private static Logger log = LogManager.getLogger(Orbit.class.getName());
 	
-	private final int apoapsisInMetres;
-	private final int periapsisInMetres;
-	private final double eccentricity;
-	private final double semiMajorAxis;
-	private final double inclination;
-	private final double longitudeOfAscendingNode;
-	private final double argumentOdPeriapsis;
-	private final double trueAnomaly;
-	private final double heightInMetres;
-	private final double speedInMetresPerSecond;
+	@Getter private final int apoapsisInMetres;
+	@Getter private final int periapsisInMetres;
+	@Getter private final double eccentricity;
+	@Getter private final double semiMajorAxis;
+	@Getter private final double inclination;
+	@Getter private final double longitudeOfAscendingNode;
+	@Getter private final double argumentOdPeriapsis;
+	@Getter private final double trueAnomaly;
+	@Getter private final double heightInMetres;
+	@Getter private final double speedInMetresPerSecond;
 	
 	public Orbit(Builder builder) {
 		apoapsisInMetres = builder.apoapsisInMetres;
@@ -30,46 +32,6 @@ public class Orbit {
 		speedInMetresPerSecond = builder.speedInMetresPerSecond;
 		
 		log.trace("new Instance of Orbit Created");
-	}
-		
-	public int getApoapsisInMetres() {
-		return apoapsisInMetres;
-	}
-
-	public int getPeriapsisInMetres() {
-		return periapsisInMetres;
-	}
-
-	public double getEccentricity() {
-		return eccentricity;
-	}
-
-	public double getSemimajorAxis() {
-		return semiMajorAxis;
-	}
-
-	public double getInclination() {
-		return inclination;
-	}
-
-	public double getLongitudeOfAscendingNode() {
-		return longitudeOfAscendingNode;
-	}
-
-	public double getArgumentOdPeriapsis() {
-		return argumentOdPeriapsis;
-	}
-
-	public double getTrueAnomaly() {
-		return trueAnomaly;
-	}
-	
-	public double getHeightInMetres() {
-		return heightInMetres;
-	}
-	
-	public double getSpeedInMetresPerSecond() {
-		return speedInMetresPerSecond;
 	}
 	
 	public static class Builder {

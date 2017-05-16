@@ -29,7 +29,6 @@ public class VisVivaImpl implements VisViva {
 //	a (alpha) semi major axis
 	
 	
-	
 	@Override
 	public double resolveForSpeed () {
 		double apoapsis = orbit.getApoapsisInMetres();

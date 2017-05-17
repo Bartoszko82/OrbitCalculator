@@ -1,5 +1,9 @@
 package com.bartoszko.util;
 
-public class CelestialBodyLoader {
+import com.bartoszko.model.CelestialBody;
+
+public interface CelestialBodyLoader {
+	
+	public CelestialBody loadBody(String celestialBodyName);
 
 }

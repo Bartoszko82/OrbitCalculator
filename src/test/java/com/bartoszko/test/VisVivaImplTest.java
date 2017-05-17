@@ -12,15 +12,17 @@ import org.mockito.junit.MockitoJUnitRunner;
 
 import com.bartoszko.model.CelestialBody;
 import com.bartoszko.model.ChosenBody;
-import com.bartoszko.model.KerbinTempForTest;
 import com.bartoszko.model.Orbit;
+import com.bartoszko.util.ChosenBodySupplier;
+import com.bartoszko.util.ChosenBodySupplierForTests;
+import com.bartoszko.util.ChosenBodySupplierImpl;
 import com.bartoszko.util.VisVivaImpl;
 
 @RunWith(MockitoJUnitRunner.class)
 public class VisVivaImplTest {
 
 	CelestialBody chosenBody = ChosenBody.INSTANCE;
-	CelestialBody kerbin = new KerbinTempForTest();
+	ChosenBodySupplier bodySupplier = new ChosenBodySupplierForTests();
 	
 	@InjectMocks
 	VisVivaImpl visViva;
@@ -37,8 +39,7 @@ public class VisVivaImplTest {
 		when(orbit.getApoapsisInMetres()).thenReturn(apoapsis);
 		when(orbit.getPeriapsisInMetres()).thenReturn(periapsis);
 		when(orbit.getHeightInMetres()).thenReturn(distance);
-		chosenBody.setRadiusInMetres(kerbin.getRadiusInMetres());
-		chosenBody.setGravitationalParameter(kerbin.getGravitationalParameter());
+		bodySupplier.supplyCelestialBody("Kerbin");
 		
 //		when
 		int result = (int)Math.floor(visViva.resolveForSpeed());

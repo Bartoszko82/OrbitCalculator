@@ -17,7 +17,7 @@ public class ChosenBodySupplierImpl implements ChosenBodySupplier {
 			//find way to set bodyFromPool as ChosenBody
 			return bodyFromPool;
 		} else {
-			CelestialBodyLoader cbl = new CelestialBodyFileLoader();
+			CelestialBodyLoader cbl = new CelestialBodyLoaderFromFile();
 			CelestialBody loadedBody = cbl.loadBody(celestialBodyName); //loadCelestialBody
 			//find way to set loadedBody as ChosenBody
 			return loadedBody;

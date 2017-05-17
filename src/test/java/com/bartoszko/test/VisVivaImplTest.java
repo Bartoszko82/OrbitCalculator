@@ -21,7 +21,6 @@ import com.bartoszko.util.VisVivaImpl;
 @RunWith(MockitoJUnitRunner.class)
 public class VisVivaImplTest {
 
-	CelestialBody chosenBody = ChosenBody.INSTANCE;
 	ChosenBodySupplier bodySupplier = new ChosenBodySupplierForTests();
 	
 	@InjectMocks
@@ -33,12 +32,10 @@ public class VisVivaImplTest {
 	@Test
 	public void shouldGiveProperSpeedForKerbinLowOrbit() {
 //		given
-		int apoapsis = 70000;
-		int periapsis = 70000;
-		double distance = 70000;
-		when(orbit.getApoapsisInMetres()).thenReturn(apoapsis);
-		when(orbit.getPeriapsisInMetres()).thenReturn(periapsis);
-		when(orbit.getHeightInMetres()).thenReturn(distance);
+		when(orbit.getApoapsisInMetres()).thenReturn(70000);
+		when(orbit.getPeriapsisInMetres()).thenReturn(70000);
+		when(orbit.getHeightInMetres()).thenReturn(70000d);
+		
 		bodySupplier.supplyCelestialBody("Kerbin");
 		
 //		when

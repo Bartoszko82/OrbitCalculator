@@ -12,7 +12,7 @@ public class ChosenBodySupplierForTests implements ChosenBodySupplier {
 	public CelestialBody supplyCelestialBody(String celestialBodyName) {
 	
 		if("Kerbin".equals(celestialBodyName)) {
-			CelestialBodyLoader cbl = new CelestialBodyKerbinLoader();
+			CelestialBodyLoader cbl = new CelestialBodyLoaderForTests();
 			CelestialBody loadedCelestialBody = cbl.loadBody("Kerbin");
 			setChosenBodyFieldsFromObject(loadedCelestialBody);
 			return loadedCelestialBody;

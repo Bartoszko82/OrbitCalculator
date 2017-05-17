@@ -4,7 +4,7 @@ import com.bartoszko.model.CelestialBody;
 import com.bartoszko.model.CelestialBodyType;
 import com.bartoszko.model.Planet;
 
-public class CelestialBodyKerbinLoader implements CelestialBodyLoader{
+public class CelestialBodyLoaderForTests implements CelestialBodyLoader{
 
 	@Override
 	public CelestialBody loadBody(String doesntMatterWillLoadKerbin) {

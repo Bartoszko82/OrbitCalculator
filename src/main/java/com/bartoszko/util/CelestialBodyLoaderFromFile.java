@@ -10,7 +10,6 @@ public class CelestialBodyLoaderFromFile implements CelestialBodyLoader {
 	
 		//TO DO		
 		
-//		CelestialBodyPool.addBody(body);
 		
 	return null;
 	}

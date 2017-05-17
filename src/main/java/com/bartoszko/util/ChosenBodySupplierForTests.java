@@ -15,6 +15,7 @@ public class ChosenBodySupplierForTests implements ChosenBodySupplier {
 			CelestialBodyLoader cbl = new CelestialBodyLoaderForTests();
 			CelestialBody loadedCelestialBody = cbl.loadBody("Kerbin");
 			setChosenBodyFieldsFromObject(loadedCelestialBody);
+			CelestialBodyPool.addBody(loadedCelestialBody);
 			return loadedCelestialBody;
 		} else {
 			return null;

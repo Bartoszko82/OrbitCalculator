@@ -19,7 +19,6 @@ public class CelestialBodyLoaderForTests implements CelestialBodyLoader{
 		kerbin.setGravitationalParameter(3.5316000e12);
 //		private final double densityInKgPerCubeMeter = 10;
 		kerbin.setSurfaceGravity(9.8);
-		CelestialBodyPool.addBody(kerbin);
 		return kerbin;
 	}
 	

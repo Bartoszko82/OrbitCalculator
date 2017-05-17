@@ -9,18 +9,24 @@ public class ChosenBodySupplierImpl implements ChosenBodySupplier {
 	
 	public CelestialBody supplyCelestialBody(String celestialBodyName) {
 		
-		
 		if(chosenBody.getName().equals(celestialBodyName)) {
 			return chosenBody;
 		} else if (CelestialBodyPool.contains(celestialBodyName)) {
 			CelestialBody bodyFromPool = CelestialBodyPool.getBody(celestialBodyName); //getCelestialBody
-			//find way to set bodyFromPool as ChosenBody
+			setChosenBodyFieldsFromObject(bodyFromPool);
 			return bodyFromPool;
 		} else {
 			CelestialBodyLoader cbl = new CelestialBodyLoaderFromFile();
 			CelestialBody loadedBody = cbl.loadBody(celestialBodyName); //loadCelestialBody
-			//find way to set loadedBody as ChosenBody
+			setChosenBodyFieldsFromObject(loadedBody);
+			CelestialBodyPool.addBody(loadedBody);
 			return loadedBody;
 		}
 	}
+	
+	private void setChosenBodyFieldsFromObject (CelestialBody body) {
+		
+	}
 }
+
+
